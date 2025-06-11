@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- SEO Meta Tags -->
+    <title>AquaPure - Premium Eco-Friendly Water Bottles | Sustainable Hydration Solutions</title>
+    <meta name="description" content="Discover AquaPure's premium collection of eco-friendly water bottles. BPA-free, leak-proof, and designed for sustainable living. Shop our award-winning hydration solutions." />
+    <meta name="keywords" content="water bottles, eco-friendly, BPA-free, sustainable, hydration, premium bottles, leak-proof, insulated" />
+    <meta name="author" content="AquaPure" />
+    <meta name="robots" content="index, follow" />
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="AquaPure - Premium Eco-Friendly Water Bottles" />
+    <meta property="og:description" content="Premium, sustainable water bottles designed for modern living. BPA-free, leak-proof, and environmentally conscious." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://aquapure.com" />
+    <meta property="og:image" content="https://aquapure.com/og-image.jpg" />
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="AquaPure - Premium Eco-Friendly Water Bottles" />
+    <meta name="twitter:description" content="Premium, sustainable water bottles designed for modern living." />
+    <meta name="twitter:image" content="https://aquapure.com/twitter-image.jpg" />
+    
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "AquaPure",
+      "url": "https://aquapure.com",
+      "logo": "https://aquapure.com/logo.png",
+      "description": "Premium eco-friendly water bottles for sustainable living",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+1-555-123-4567",
+        "contactType": "customer service",
+        "email": "hello@aquapure.com"
+      },
+      "sameAs": [
+        "https://facebook.com/aquapure",
+        "https://twitter.com/aquapure",
+        "https://instagram.com/aquapure"
+      ]
+    }
+    </script>
+    
+    <!-- Preload Critical Resources -->
+    <link rel="preload" href="/src/index.css" as="style" />
+    <link rel="preconnect" href="https://images.pexels.com" />
+    <link rel="dns-prefetch" href="https://images.pexels.com" />
+    
+    <!-- Theme Detection Script -->
+    <script>
+      (function() {
+        const theme = localStorage.getItem('theme') || 
+          (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        document.documentElement.classList.toggle('dark', theme === 'dark');
+      })();
+    </script>
+  </head>
+  <body>
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+      <div class="loading-container">
+        <div class="water-droplet">
+          <div class="droplet-inner"></div>
+        </div>
+        <div class="loading-text">
+          <span class="brand-name">AquaPure</span>
+          <div class="loading-dots">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Main Content -->
+    <div id="root" class="hidden"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
