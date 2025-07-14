@@ -16,15 +16,12 @@ function App() {
   // Handle loading completion
   const handleLoadingComplete = () => {
     setIsAppLoading(false);
-    // Show content with a slight delay for smooth transition
     setTimeout(() => {
       setIsContentVisible(true);
-      // Remove loading screen from DOM
       const loadingElement = document.getElementById('loading-screen');
       if (loadingElement) {
         loadingElement.remove();
       }
-      // Show main content
       const rootElement = document.getElementById('root');
       if (rootElement) {
         rootElement.classList.remove('hidden');
@@ -53,12 +50,26 @@ function App() {
 
   return (
     <div className={`${isDark ? 'dark' : ''} transition-colors duration-300`}>
-      <div className={`bg-white dark:bg-gray-900 text-gray-900 dark:text-white min-h-screen overflow-x-hidden transition-all duration-300 ${
-        isContentVisible ? 'opacity-100' : 'opacity-0'
-      }`}>
+      <div
+        className={`bg-white dark:bg-gray-900 text-gray-900 dark:text-white min-h-screen overflow-x-hidden transition-all duration-300 ${
+          isContentVisible ? 'opacity-100' : 'opacity-0'
+        }`}
+      >
         <Navigation isDark={isDark} toggleTheme={toggleTheme} />
         <main role="main">
           <Hero />
+
+          {/* Spline 3D Model */}
+          <div className="w-full h-screen">
+            <iframe
+              src="https://my.spline.design/worldplanet-MZ1T6guXrqDSwcyyolCIGpek/"
+              className="w-full h-full"
+              frameBorder="0"
+              allow="fullscreen"
+              title="Spline 3D World Planet"
+            ></iframe>
+          </div>
+
           <About />
           <Products />
           <Features />
